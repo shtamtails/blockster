@@ -1,0 +1,49 @@
+.input-container {
+  .icon {
+    color: colors.$neutral;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    left: 16px;
+  }
+
+  input {
+    box-sizing: border-box;
+    background-color: colors.$secondary;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: colors.$neutral;
+    &:focus {
+      outline: 0 none;
+    }
+    &::placeholder {
+      color: colors.$neutral;
+    }
+  }
+
+  .input-with-icon {
+    padding-left: 48px;
+  }
+
+  .input-fullwidth {
+    width: 100%;
+  }
+
+  .input-size-xs {
+  }
+
+  .input-size-sm {
+  }
+
+  .input-size-md {
+  }
+
+  .input-size-lg {
+  }
+
+  .input-size-xl {
+  }
+}

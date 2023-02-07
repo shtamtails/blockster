@@ -1,6 +1,8 @@
 @use "./utils/colors.scss";
 @use "./utils/spacing.scss";
-@import url(./utils/normalize.css);
+@import "./utils/normalize.css";
+@import "/src/assets/components/page/header/header.scss";
+@import "/src/assets/components/reusable/Input/input.scss";
 
 body {
   background-color: colors.$background;
@@ -11,39 +13,10 @@ a {
   text-decoration: none;
 }
 
-.header {
-  height: 50px;
-  background-color: colors.$primary;
+.action-button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  color: colors.$white;
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      height: 36px;
-      width: auto;
-    }
-  }
-  .header-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-    .upper-title {
-      line-height: 1;
-      font-size: 16px;
-      font-weight: 800;
-    }
-    .lower-title {
-      color: #b3b4b9;
-      line-height: 1;
-      font-size: 14px;
-      letter-spacing: 1.75px;
-    }
-  }
+  justify-content: center;
+  padding-left: 16px;
+  color: colors.$neutral;
 }
