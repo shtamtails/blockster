@@ -57,10 +57,33 @@
   }
 }
 
+@mixin border-radius-utility($att, $prefix: "-") {
+  $sizes: "xs", "sm", "md", "lg", "xl", "xxl";
+
+  $border-map: (
+    xs: 4px,
+    sm: 6px,
+    md: 8px,
+    lg: 10px,
+    xl: 12px,
+    xxl: 14px,
+    round: 100%,
+  );
+
+  @each $name, $value in $border-map {
+    &#{$prefix}#{$name} {
+      #{$att}: $value;
+    }
+  }
+}
 .margin {
   @include spacing-utility(margin);
 }
 
 .padding {
   @include spacing-utility(padding);
+}
+
+.border {
+  @include border-radius-utility(border-radius);
 }

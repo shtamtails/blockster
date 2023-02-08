@@ -51,3 +51,26 @@
     width: 60px;
   }
 }
+
+@media (max-width: $tablet) {
+  .charts {
+    width: calc(100vw - $lg);
+    padding: $lg $md;
+  }
+}
+
+@media (max-width: $mobile-l) {
+  .charts {
+    padding: $xxl $md;
+  }
+}
+
+.hidden {
+  transition: 1s ease;
+  opacity: 0;
+}
+
+.visible {
+  transition: 1s ease;
+  opacity: 1;
+}

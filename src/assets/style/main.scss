@@ -1,4 +1,4 @@
-@import "./utils/spacing.scss";
+@import "./utils/mixins.scss";
 @import "./utils/var.scss";
 @import "./utils/normalize.css";
 @import "/src/assets/components/page/header/header.scss";
@@ -29,6 +29,12 @@ a {
 }
 
 .content {
-  margin-left: 100px;
+  margin-left: 80px;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: $lg;
+  }
 }
