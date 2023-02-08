@@ -1,18 +1,18 @@
 .header {
-  height: 50px;
-  background-color: colors.$primary;
+  height: $header-h;
+  background-color: $primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  color: colors.$white;
+  padding: 0 $lg;
+  color: $white;
 
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      height: 36px;
+      height: $xxl;
       width: auto;
     }
     .header-title {
@@ -20,7 +20,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: 5px;
+      margin-left: $md;
       .upper-title {
         line-height: 1;
         font-size: 16px;

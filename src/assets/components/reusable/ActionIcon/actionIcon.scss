@@ -3,23 +3,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding-left: 16px;
-  color: colors.$neutral;
+  color: $neutral;
+  &:hover {
+    color: $white;
+  }
   img {
-    height: 22px;
+    height: $xl;
     width: auto;
   }
 }
 
 .action-icon-hover {
   padding: 10px;
-  color: colors.$neutral;
+  color: $neutral;
   background-color: none;
-  border-radius: 10px;
+  border-radius: $border-lg;
   transition: all 0.1s ease;
 
   &:hover {
-    color: colors.$white;
-    background-color: colors.$primary;
+    color: $white;
+    background-color: $primary;
   }
 }

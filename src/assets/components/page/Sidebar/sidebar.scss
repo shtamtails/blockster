@@ -1,11 +1,11 @@
 .sidebar {
   box-sizing: border-box;
-  padding: 10px 0px;
+  padding: $lg 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 70px;
+  width: $sidebar-w;
   position: absolute;
-  height: calc(100vh - 50px);
+  height: calc(100vh - $header-h);
 }

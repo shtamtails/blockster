@@ -1,0 +1,53 @@
+.charts {
+  box-sizing: border-box;
+  width: calc(100vw - 124px);
+  overflow-x: scroll;
+  display: flex;
+  padding: $xxl $md;
+  &::-webkit-scrollbar {
+    max-height: 0px;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      max-height: $md;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: $border-xxl;
+  }
+  .chart {
+    &:not(:first-child) {
+      padding-left: $xl;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    padding-right: $xl;
+    border-right: 1px solid $secondary;
+    min-width: 250px;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    .chart-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .chart-info-currency {
+        display: flex;
+        align-items: center;
+        .chart-info-currency-logo {
+          margin-right: $sm;
+        }
+      }
+    }
+  }
+  .chart-misc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 60px;
+  }
+}

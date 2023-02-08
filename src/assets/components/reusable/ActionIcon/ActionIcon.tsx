@@ -8,6 +8,7 @@ interface ActionIconProps {
   className?: string;
   img?: string;
   type?: "hover";
+  borderRadius?: "xs" | "sm" | "md" | "lg" | "xl" | "round";
 }
 
 export const ActionIcon: React.FC<ActionIconProps> = (props) => {

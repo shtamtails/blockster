@@ -1,17 +1,18 @@
-import { RiHome2Line, RiUserLine } from "react-icons/ri";
-import { BsGlobe2, BsLightningCharge } from "react-icons/bs";
-import { AiOutlineLineChart, AiOutlineFlag } from "react-icons/ai";
+import { BsGlobe2, BsLightningCharge, BsStar } from "react-icons/bs";
 import Header from "./assets/components/page/Header/Header";
-import { ActionIcon } from "./assets/components/reusable/ActionIcon/ActionIcon";
 import "./assets/style/main.scss";
 import { Sidebar } from "./assets/components/page/Sidebar/Sidebar";
+import { LineChart, Line, CartesianGrid, Tooltip, XAxis, YAxis, Area, AreaChart, ResponsiveContainer } from "recharts";
+import { Charts } from "./assets/components/page/Charts/Charts";
 
 function App() {
   return (
     <>
       <Header />
       <Sidebar />
-      <div className="content"></div>
+      <div className="content">
+        <Charts />
+      </div>
     </>
   );
 }
