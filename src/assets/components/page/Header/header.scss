@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
   color: colors.$white;
 
   .logo {
@@ -60,7 +60,7 @@
 
 @media (max-width: 600px) {
   .search {
-    display: none;
+    display: none !important;
   }
   .misc {
     .search-icon {
@@ -87,7 +87,10 @@
       right: 30px;
     }
     .main-icon {
-      display: none;
+      display: none !important;
+    }
+    .search-icon {
+      display: none !important;
     }
   }
 }

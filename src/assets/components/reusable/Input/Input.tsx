@@ -27,7 +27,7 @@ export const Input: React.FC<InputProps> = (props) => {
 
   return (
     <div className="input-container">
-      <div className="icon">{props.icon}</div>
+      {props.icon && <div className="icon">{props.icon}</div>}
       <input
         ref={props.ref}
         placeholder={props.placeholder}

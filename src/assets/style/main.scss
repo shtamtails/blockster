@@ -3,6 +3,8 @@
 @import "./utils/normalize.css";
 @import "/src/assets/components/page/header/header.scss";
 @import "/src/assets/components/reusable/Input/input.scss";
+@import "/src/assets/components/reusable/ActionIcon/actionIcon.scss";
+@import "/src/assets/components/page/Sidebar/sidebar.scss";
 
 body {
   background-color: colors.$background;
@@ -13,10 +15,50 @@ a {
   text-decoration: none;
 }
 
-.action-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 16px;
-  color: colors.$neutral;
+.padding-xs {
+  padding: 4px;
+}
+
+.padding-sm {
+  padding: 6px;
+}
+
+.padding-md {
+  padding: 8px;
+}
+
+.padding-lg {
+  padding: 10px;
+}
+
+.padding-xl {
+  padding: 12px;
+}
+
+.padding-left-xl {
+  padding-left: 12px;
+}
+
+.margin-xs {
+  margin: 4px;
+}
+
+.margin-sm {
+  margin: 6px;
+}
+
+.margin-md {
+  margin: 8px;
+}
+
+.margin-lg {
+  margin: 10px;
+}
+
+.margin-xl {
+  margin: 12px;
+}
+
+.content {
+  margin-left: 70px;
 }

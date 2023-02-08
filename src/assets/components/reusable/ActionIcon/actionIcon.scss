@@ -1,0 +1,25 @@
+.action-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding-left: 16px;
+  color: colors.$neutral;
+  img {
+    height: 22px;
+    width: auto;
+  }
+}
+
+.action-icon-hover {
+  padding: 10px;
+  color: colors.$neutral;
+  background-color: none;
+  border-radius: 10px;
+  transition: all 0.1s ease;
+
+  &:hover {
+    color: colors.$white;
+    background-color: colors.$primary;
+  }
+}
