@@ -1,0 +1,39 @@
+.news-container {
+  .post {
+    margin: $lg 0;
+    font-size: 0.9em;
+    // margin-right: $md;
+    position: relative;
+    .post-header {
+      display: flex;
+      align-items: center;
+      .post-source {
+        .post-time {
+          color: $neutral;
+        }
+      }
+      .post-icon {
+        margin-right: $sm;
+      }
+      .post-social {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  .post-body {
+    line-height: 1.5em;
+    margin-top: $md;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .post-header {
+    font-size: 0.8em;
+  }
+  .post-body {
+    font-size: 0.8em;
+  }
+}
