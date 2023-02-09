@@ -1,0 +1,48 @@
+.airdrops-calendar {
+  margin: $lg 0;
+  padding: $lg 0;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: overlay;
+  &::-webkit-scrollbar {
+    max-height: 0px;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      max-height: $md;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: $border-xxl;
+  }
+  .box {
+    &:not(:first-child) {
+      margin-left: $xl;
+    }
+    padding: $lg;
+    min-height: 200px;
+    min-width: 200px;
+    border-radius: $border-lg;
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .airdrop-date {
+      display: flex;
+      align-items: center;
+      span {
+        padding-right: $sm;
+        font-size: 1.5em;
+      }
+    }
+    .airdrop-name {
+      font-size: 0.9em;
+    }
+    .airdrop-amount {
+      font-size: 0.8em;
+      color: $neutral;
+    }
+  }
+}
