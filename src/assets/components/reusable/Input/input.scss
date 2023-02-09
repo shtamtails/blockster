@@ -20,6 +20,8 @@
       outline: 0 none;
     }
     &::placeholder {
+      font-weight: 300;
+      font-size: 16px;
       color: $neutral;
     }
   }

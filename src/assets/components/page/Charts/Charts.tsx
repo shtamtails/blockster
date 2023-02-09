@@ -43,7 +43,7 @@ export const Charts = () => {
     const response = await fetch(`https://api.binance.com/api/v3/avgPrice?symbol=${name}`);
     const price: avgPrice = await response.json();
     const tranformedPrice = +price.price;
-    return `${tranformedPrice.toFixed(2)}$`;
+    return `$${tranformedPrice.toFixed(2)}`;
   };
 
   const cryptocurrenciesDefault: Tcryptocurrencies = [

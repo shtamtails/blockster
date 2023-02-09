@@ -6,9 +6,11 @@
 @import "/src/assets/components/reusable/ActionIcon/actionIcon.scss";
 @import "/src/assets/components/page/Sidebar/sidebar.scss";
 @import "/src/assets/components/reusable/Chart/chart.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
 
 body {
   background-color: $background;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -29,12 +31,109 @@ a {
 }
 
 .content {
-  margin-left: 80px;
+  margin: 0 auto;
+  max-width: 1500px;
+  // margin-left: 100px;
   color: white;
 }
 
 @media (max-width: 768px) {
   .content {
     margin-left: $lg;
+  }
+}
+
+.news {
+  margin: $lg 0;
+  display: flex;
+  main {
+    padding-right: $xxl;
+    position: relative;
+    width: 75%;
+    .airdrops-calendar {
+      margin: $xxl 0;
+      display: flex;
+      justify-content: space-between;
+      .box {
+        padding: $lg;
+        height: 200px;
+        width: 200px;
+        border-radius: $border-lg;
+        background-color: $secondary;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .airdrop-date {
+          display: flex;
+          align-items: center;
+          span {
+            padding-right: $sm;
+            font-size: 1.5em;
+          }
+        }
+        .airdrop-name {
+          font-size: 0.9em;
+        }
+        .airdrop-amount {
+          font-size: 0.8em;
+          color: $neutral;
+        }
+      }
+    }
+  }
+  aside {
+    // padding-right: $xxl;
+    width: 25%;
+    .news-container {
+      .post {
+        margin: $lg 0;
+        font-size: 0.9em;
+        // margin-right: $md;
+        position: relative;
+        .post-header {
+          display: flex;
+          align-items: center;
+          .post-source {
+            .post-time {
+              color: $neutral;
+            }
+          }
+          .post-icon {
+            margin-right: $sm;
+          }
+          .post-social {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+      .post-body {
+        line-height: 1.5em;
+        margin-top: $md;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.title {
+  display: flex;
+  // justify-content: space-between;
+  .title-text {
+    font-size: 1.2em;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  .line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: $xl;
+    .line {
+      background-color: $secondary;
+      height: 1px;
+      width: 100%;
+    }
   }
 }
