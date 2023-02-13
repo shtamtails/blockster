@@ -1,7 +1,5 @@
 // 426px
 @media (max-width: $mobile-l) {
-  .charts {
-  }
   .sidebar {
     display: none;
   }
@@ -22,6 +20,11 @@
     }
     .post-title {
       padding-bottom: $xl;
+    }
+  }
+  .podcast {
+    &:not(:last-child) {
+      margin-bottom: $xxl !important;
     }
   }
 }

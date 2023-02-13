@@ -23,9 +23,6 @@
     &:first-child {
       display: flex !important;
     }
-    &:not(:last-child) {
-      margin-bottom: $lg !important;
-    }
   }
   .small-post-image img {
     width: 150px !important;
@@ -33,5 +30,27 @@
   }
   .title {
     margin: $xl 0;
+  }
+
+  .podcasts-mobile {
+    display: block !important;
+    .podcasts-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .podcast {
+        width: 48%;
+        .podcast-body {
+          font-size: 1rem !important;
+        }
+        .podcast-footer {
+          font-size: 0.9rem;
+        }
+        .podcast-listeners {
+          display: flex !important;
+        }
+      }
+    }
   }
 }

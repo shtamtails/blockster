@@ -6,3 +6,21 @@
     font-size: 0.8em !important;
   }
 }
+
+@media (max-width: 1745px) {
+  .content {
+    padding: 0 $sidebar-w;
+    padding-right: $xl;
+  }
+}
+
+@media (max-width: 600px) {
+  .search {
+    display: none !important;
+  }
+  .misc {
+    .search-icon {
+      display: flex !important;
+    }
+  }
+}

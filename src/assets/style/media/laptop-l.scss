@@ -1,0 +1,9 @@
+// 1440px
+@media (max-width: $laptop-l) {
+  .podcast-body {
+    font-size: 0.8rem !important;
+  }
+  .podcast-listeners {
+    display: none !important;
+  }
+}

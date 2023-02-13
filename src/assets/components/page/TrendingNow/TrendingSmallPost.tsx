@@ -9,6 +9,7 @@ export const TrendingSmallPost: React.FC<PostProps> = (props) => {
       <a href={props.link} className="small-post-image">
         <img src={props.img} />
       </a>
+
       <div className="small-post-info">
         <div className="tags-container">
           <div className="tags">{props.tag && <div className="tag">{props.tag}</div>}</div>
@@ -18,6 +19,7 @@ export const TrendingSmallPost: React.FC<PostProps> = (props) => {
         <a href={props.link} className="post-title">
           {props.title}
         </a>
+
         <div className="post-info">
           <div className="post-author">
             <ActionIcon icon={<FiUser />} />
