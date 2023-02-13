@@ -1,9 +1,9 @@
 .charts {
+  margin-top: $xxl;
   box-sizing: border-box;
   max-width: 1600px;
   overflow-x: overlay;
   display: flex;
-  padding: $xxl $md;
   &::-webkit-scrollbar {
     max-height: 0px;
   }
@@ -55,19 +55,6 @@
     justify-content: space-between;
     align-items: end;
     width: 60px;
-  }
-}
-
-@media (max-width: $tablet) {
-  .charts {
-    width: calc(100vw - $lg);
-    padding: $lg $md;
-  }
-}
-
-@media (max-width: $mobile-l) {
-  .charts {
-    padding: $xxl $md;
   }
 }
 

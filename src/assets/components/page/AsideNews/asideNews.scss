@@ -1,24 +1,31 @@
 .news-container {
-  padding: $lg 0;
   .post {
-    margin: $lg 0;
+    &:not(:last-child) {
+      margin-bottom: $lg;
+    }
     font-size: 0.9em;
     position: relative;
     .post-header {
+      width: 100%;
       margin-bottom: $sm;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       .post-source {
-        .post-time {
-          color: $neutral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .post-source-name {
+          .post-time {
+            color: $neutral;
+          }
         }
       }
       .post-icon {
         margin-right: $sm;
       }
       .post-social {
-        position: absolute;
-        right: 0;
+        justify-self: flex-end;
       }
     }
   }
@@ -27,14 +34,5 @@
     margin-top: $md;
     font-weight: 300;
     font-size: 0.9em;
-  }
-}
-
-@media (max-width: 1200px) {
-  .post-header {
-    font-size: 0.8em;
-  }
-  .post-body {
-    font-size: 0.8em;
   }
 }

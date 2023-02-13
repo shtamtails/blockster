@@ -9,6 +9,7 @@
 @import "/src/assets/components/page/AsideNews/asideNews.scss";
 @import "/src/assets/components/page/AirdropsCalendar/airdropsCalendar.scss";
 @import "/src/assets/components/reusable/Title/title.scss";
+@import "/src/assets/components/page/TrendingNow/TrendingNow.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
 
 body {
@@ -49,15 +50,13 @@ a {
 }
 
 .news {
-  margin: $lg 0;
   display: flex;
-
   main {
     padding-right: $xxl;
     position: relative;
     width: 75%;
     .main-ad {
-      margin: $lg 0;
+      margin-top: $xxl;
       width: 100%;
       height: auto;
       img {
@@ -74,7 +73,7 @@ a {
   aside {
     width: 25%;
     .aside-ad {
-      margin: $md 0;
+      margin-top: $xxl;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -88,48 +87,9 @@ a {
   }
 }
 
-.trending-now-container {
-  margin: $xxl 0;
-  display: flex;
-  .big-post {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: $md;
-    width: 50%;
-    height: auto;
-    .big-post-image {
-      img {
-        object-fit: cover;
-        border-radius: $border-xxl;
-        width: 100%;
-        height: 300px;
-      }
-    }
-  }
-}
-
-.post-title {
-  padding-bottom: $md;
-  font-size: 1.2em;
-}
-
-.post-info {
-  display: flex;
-  align-items: center;
-  font-size: 0.85em;
-  .post-user-icon {
-    margin-right: $md;
-  }
-  span {
-    padding-left: $sm;
-    color: $neutral;
-  }
-}
-
 .tags {
   position: relative;
-  padding: $lg 0;
+  margin-bottom: $md;
   display: flex;
   flex-wrap: wrap;
   gap: $md 0;
@@ -140,10 +100,6 @@ a {
     font-size: 0.8em;
     background-color: $secondary;
   }
-  .bookmark {
-    position: absolute;
-    right: 0;
-  }
 }
 
 .moretags {
@@ -151,60 +107,31 @@ a {
   color: $neutral;
 }
 
-.right-posts {
-  padding-left: $md;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .small-post {
-    &:not(:first-child) {
-      margin-top: $xl;
-    }
-    display: flex;
-    .small-post-image {
-      img {
-        border-radius: $border-xxl;
-        width: 125px;
-        height: 125px;
-        object-fit: cover;
-      }
-    }
-    .small-post-info {
-      width: 100%;
-      margin-left: $lg;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      .tags {
-        padding-top: 0;
-      }
-      .post-info {
-        padding: 0;
-      }
-    }
-  }
-}
-
-@media (max-width: 1745px) {
-  .content {
-    padding: 0 $sidebar-w;
-    padding-right: $xl;
-  }
-}
-
+// 768px
 @media (max-width: $tablet) {
   .content {
     padding: 0 $lg;
   }
   .charts {
     max-width: calc(100vw - $xxl) !important;
+    padding: $lg 0;
   }
   main {
     padding-right: 0px !important;
   }
+  .sidebar {
+    padding: 0px;
+    width: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
+// 1024px
 @media (max-width: $laptop) {
   .charts {
     max-width: calc(100vw - 128px);
@@ -217,5 +144,64 @@ a {
   }
   .aside-news-mobile {
     display: block !important;
+  }
+}
+
+// 426px
+@media (max-width: $mobile-l) {
+  .charts {
+    padding: $xxl $md;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+// 376px
+@media (max-width: $mobile-m) {
+  .header-title {
+    display: none !important;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .misc {
+    .button-icon {
+      display: flex !important;
+      position: absolute;
+      right: 30px;
+    }
+    .main-icon {
+      display: none !important;
+    }
+    .search-icon {
+      display: none !important;
+    }
+  }
+}
+
+// 320px
+@media (max-width: $mobile-s) {
+}
+
+@media (max-width: 1745px) {
+  .content {
+    padding: 0 $sidebar-w;
+    padding-right: $xl;
+  }
+}
+
+@media (max-width: 600px) {
+  .search {
+    display: none !important;
+  }
+  .misc {
+    .search-icon {
+      display: flex !important;
+    }
   }
 }

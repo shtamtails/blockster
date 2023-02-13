@@ -16,12 +16,15 @@ export const AsidePost: React.FC<AsidePostProps> = (props) => {
   return (
     <div className="post">
       <div className="post-header">
-        <div className="post-icon">
-          <ActionIcon img={props.srcIcon} borderRadius="round" />
+        <div className="post-source">
+          <div className="post-icon">
+            <ActionIcon img={props.srcIcon} borderRadius="round" />
+          </div>
+          <a href={props.src} className="post-source-name">
+            {props.srcName} <span className="post-time"> · {props.time}</span>
+          </a>
         </div>
-        <a href={props.src} className="post-source">
-          {props.srcName} <span className="post-time"> · {props.time}</span>
-        </a>
+
         <div className="post-social">
           <ActionIcon icon={props.srcSocialIcon} />
         </div>

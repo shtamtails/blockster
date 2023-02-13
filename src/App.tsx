@@ -4,7 +4,6 @@ import { Charts } from "./assets/components/page/Charts/Charts";
 import Header from "./assets/components/page/Header/Header";
 import { Sidebar } from "./assets/components/page/Sidebar/Sidebar";
 import { TrendingNow } from "./assets/components/page/TrendingNow/TrendingNow";
-import { Title } from "./assets/components/reusable/Title/Title";
 import "./assets/style/main.scss";
 
 function App() {

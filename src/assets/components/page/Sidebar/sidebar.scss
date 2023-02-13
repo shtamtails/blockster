@@ -1,5 +1,5 @@
 .sidebar {
-  padding: $lg 0px;
+  margin-top: calc($xxl - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -7,23 +7,4 @@
   width: $sidebar-w;
   position: absolute;
   height: calc(100vh - $header-h);
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    padding: 0px;
-    width: auto;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media (max-width: 426px) {
-  .sidebar {
-    display: none;
-  }
 }

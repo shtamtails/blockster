@@ -10,12 +10,11 @@ export const TrendingSmallPost: React.FC<PostProps> = (props) => {
         <img src={props.img} />
       </a>
       <div className="small-post-info">
-        <div className="tags">
-          {props.tag && <div className="tag">{props.tag}</div>}
-          <div className="bookmark">
-            <ActionIcon icon={<BsBookmark size={20} />} />
-          </div>
+        <div className="tags-container">
+          <div className="tags">{props.tag && <div className="tag">{props.tag}</div>}</div>
+          <ActionIcon icon={<BsBookmark size={20} />} />
         </div>
+
         <a href={props.link} className="post-title">
           {props.title}
         </a>
