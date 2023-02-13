@@ -63,10 +63,10 @@ a {
     position: relative;
     width: 75%;
     .main-ad {
-      margin-top: $xxl;
       width: 100%;
       height: auto;
       img {
+        margin-top: $xxl;
         border-radius: $border-lg;
         object-fit: cover;
         width: 100%;

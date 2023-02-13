@@ -21,18 +21,18 @@ function App() {
             </div>
             <AirdropsCalendar />
             <TrendingNow />
-            <div className="main-ad">
-              <img src="https://www.vseprosport.ru/images/bookmaker-banners/1xby_1645015630.webp" />
-            </div>
+            <a href="#" className="main-ad">
+              <img src="https://i.ibb.co/XpZ3H6K/Untitled-12.png" />
+            </a>
             <div className="podcasts-mobile">
               <Podcasts />
             </div>
           </main>
           <aside>
             <AsideNews />
-            <div className="aside-ad">
-              <img src="https://blockwiz.com/wp-content/uploads/2022/09/Blog-01-1.jpg" />
-            </div>
+            <a href="#" className="aside-ad">
+              <img src="https://i.ibb.co/sbDrhKp/Untitled-1.png" />
+            </a>
             <Podcasts />
           </aside>
         </div>
