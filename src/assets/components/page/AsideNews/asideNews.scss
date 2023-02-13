@@ -3,7 +3,7 @@
     &:not(:last-child) {
       margin-bottom: $lg;
     }
-    font-size: 0.9em;
+    font-size: 0.9rem;
     position: relative;
     .post-header {
       width: 100%;
@@ -25,14 +25,14 @@
         margin-right: $sm;
       }
       .post-social {
-        justify-self: flex-end;
+        margin-left: $md;
       }
     }
   }
   .post-body {
-    line-height: 1.5em;
+    line-height: 1.5rem;
     margin-top: $md;
-    font-weight: 300;
-    font-size: 0.9em;
+    font-size: 0.9rem;
+    color: rgb(199, 199, 199);
   }
 }

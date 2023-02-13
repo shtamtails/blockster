@@ -11,6 +11,12 @@
 @import "/src/assets/components/reusable/Title/title.scss";
 @import "/src/assets/components/page/TrendingNow/TrendingNow.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
+@import "/src/assets/style/media/custom.scss";
+@import "/src/assets/style/media/laptop.scss";
+@import "/src/assets/style/media/mobile-l.scss";
+@import "/src/assets/style/media/mobile-m.scss";
+@import "/src/assets/style/media/mobile-s.scss";
+@import "/src/assets/style/media/tablet.scss";
 
 body {
   background-color: $background;
@@ -43,7 +49,6 @@ a {
 }
 
 .content {
-  // margin-left: 100px;
   margin: 0 auto;
   max-width: 1600px;
   color: white;
@@ -89,7 +94,6 @@ a {
 
 .tags {
   position: relative;
-  margin-bottom: $md;
   display: flex;
   flex-wrap: wrap;
   gap: $md 0;
@@ -97,111 +101,12 @@ a {
     margin-right: $md;
     border-radius: $sm;
     padding: $sm;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     background-color: $secondary;
   }
 }
 
 .moretags {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: $neutral;
-}
-
-// 768px
-@media (max-width: $tablet) {
-  .content {
-    padding: 0 $lg;
-  }
-  .charts {
-    max-width: calc(100vw - $xxl) !important;
-    padding: $lg 0;
-  }
-  main {
-    padding-right: 0px !important;
-  }
-  .sidebar {
-    padding: 0px;
-    width: auto;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-// 1024px
-@media (max-width: $laptop) {
-  .charts {
-    max-width: calc(100vw - 128px);
-  }
-  main {
-    width: 100% !important;
-  }
-  aside {
-    display: none;
-  }
-  .aside-news-mobile {
-    display: block !important;
-  }
-}
-
-// 426px
-@media (max-width: $mobile-l) {
-  .charts {
-    padding: $xxl $md;
-  }
-  .sidebar {
-    display: none;
-  }
-}
-
-// 376px
-@media (max-width: $mobile-m) {
-  .header-title {
-    display: none !important;
-  }
-  .logo {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .misc {
-    .button-icon {
-      display: flex !important;
-      position: absolute;
-      right: 30px;
-    }
-    .main-icon {
-      display: none !important;
-    }
-    .search-icon {
-      display: none !important;
-    }
-  }
-}
-
-// 320px
-@media (max-width: $mobile-s) {
-}
-
-@media (max-width: 1745px) {
-  .content {
-    padding: 0 $sidebar-w;
-    padding-right: $xl;
-  }
-}
-
-@media (max-width: 600px) {
-  .search {
-    display: none !important;
-  }
-  .misc {
-    .search-icon {
-      display: flex !important;
-    }
-  }
 }

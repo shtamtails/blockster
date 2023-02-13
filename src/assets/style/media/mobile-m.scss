@@ -1,0 +1,29 @@
+// 376px
+@media (max-width: $mobile-m) {
+  .header-title {
+    display: none !important;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .misc {
+    .button-icon {
+      display: flex !important;
+      position: absolute;
+      right: 30px;
+    }
+    .main-icon {
+      display: none !important;
+    }
+    .search-icon {
+      display: none !important;
+    }
+  }
+  .sidebar {
+    display: none !important;
+  }
+}

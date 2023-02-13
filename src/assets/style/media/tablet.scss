@@ -1,0 +1,28 @@
+// 768px
+@media (max-width: $tablet) {
+  .content {
+    padding: 0 $lg !important;
+  }
+  .charts {
+    max-width: calc(100vw - $xxl) !important;
+    margin-top: $lg !important;
+  }
+  main {
+    padding-right: 0px !important;
+  }
+  .sidebar {
+    margin-top: 0px !important;
+    padding: 0px;
+    width: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .small-post-image img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

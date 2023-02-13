@@ -21,7 +21,9 @@
     }
     padding: $lg;
     min-height: 200px;
+    height: 200px;
     min-width: 200px;
+    width: 200px;
     border-radius: $border-lg;
     background-color: $secondary;
     display: flex;
@@ -32,14 +34,14 @@
       align-items: center;
       span {
         padding-right: $sm;
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
     .airdrop-name {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     .airdrop-amount {
-      font-size: 0.8em;
+      font-size: 0.8rem;
       color: $neutral;
     }
   }

@@ -19,10 +19,12 @@ export const TrendingSmallPost: React.FC<PostProps> = (props) => {
           {props.title}
         </a>
         <div className="post-info">
-          <div className="post-user-icon">
+          <div className="post-author">
             <ActionIcon icon={<FiUser />} />
+            {props.user}
           </div>
-          {props.user} <span> · {props.date}</span>
+          <span>·</span>
+          <div className="post-date">{props.date}</div>
         </div>
       </div>
     </div>
