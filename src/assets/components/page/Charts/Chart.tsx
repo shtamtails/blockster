@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsCheckLg, BsStar, BsStarFill } from "react-icons/bs";
 import { AreaChart, Area } from "recharts";
-import { ActionIcon } from "../ActionIcon/ActionIcon";
+import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
 
 interface ChartProps {
   name: string;

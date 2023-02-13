@@ -1,10 +1,11 @@
 .news-container {
+  padding: $lg 0;
   .post {
     margin: $lg 0;
     font-size: 0.9em;
-    // margin-right: $md;
     position: relative;
     .post-header {
+      margin-bottom: $sm;
       display: flex;
       align-items: center;
       .post-source {

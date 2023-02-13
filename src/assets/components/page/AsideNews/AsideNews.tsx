@@ -1,5 +1,5 @@
 import { BsTwitter } from "react-icons/bs";
-import { AsidePost } from "../../reusable/AsidePost/AsidePost";
+import { AsidePost } from "./AsidePost";
 import { Title } from "../../reusable/Title/Title";
 
 export const AsideNews = () => {
@@ -13,7 +13,7 @@ export const AsideNews = () => {
           srcName="DeFi News Network"
           time="12 m"
           srcSocialIcon={<BsTwitter color={"#00acee"} />}
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique consequuntur tenetur, odit quas quidem soluta sunt cumque eum atque libero, quibusdam necessitatibus dolores nam totam esse, excepturi perferendis quam officiis!..."
+          content="The Ukrainian government announced on Tuesday that it will now accept crypto donations through the polkadot network after adding a dot waller address and promising that more coins will be added soon."
         />
         <AsidePost
           src="#"
@@ -21,7 +21,7 @@ export const AsideNews = () => {
           srcName="XRIV | Infinity Vault"
           time="20 m"
           srcSocialIcon={<BsTwitter color={"#00acee"} />}
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio laborum aliquid labore ea repellendus, doloremque sapiente voluptatem unde fuga consequuntur?"
+          content="Big news for the XRIV community! Our 2ND Airdrop will be held on Mar 06, 2022. 2ND Airdrop is only for holders."
         />
         <AsidePost
           src="#"
@@ -29,7 +29,7 @@ export const AsideNews = () => {
           srcName="Bitcoin Magazine"
           time="36 m"
           srcSocialIcon={<BsTwitter color={"#00acee"} />}
-          content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem distinctio..."
+          content="BREAKING: Switzerland's City of Lugana will make #bitcoin"
         />
       </div>
     </>

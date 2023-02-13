@@ -1,26 +1,29 @@
 import { BsBookmark } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
-import { ActionIcon } from "../ActionIcon/ActionIcon";
+import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import { PostProps } from "./TrendingBigPost";
 
-export const TrendingSmallPost = () => {
+export const TrendingSmallPost: React.FC<PostProps> = (props) => {
   return (
     <div className="small-post">
-      <div className="small-post-image">
-        <img src="https://uk.sganalytics.com/assets/uploads/fcimages/images/NFT%20digital%20art.jpg" />
-      </div>
+      <a href={props.link} className="small-post-image">
+        <img src={props.img} />
+      </a>
       <div className="small-post-info">
         <div className="tags">
-          <div className="tag">Business Spotlight</div>
+          {props.tag && <div className="tag">{props.tag}</div>}
           <div className="bookmark">
             <ActionIcon icon={<BsBookmark size={20} />} />
           </div>
         </div>
-        <div className="post-title">How realistic is a $400,000 Bitcoid asd asn?</div>
+        <a href={props.link} className="post-title">
+          {props.title}
+        </a>
         <div className="post-info">
           <div className="post-user-icon">
             <ActionIcon icon={<FiUser />} />
           </div>
-          Alexander Robertson <span> · 22 May, 2022</span>
+          {props.user} <span> · {props.date}</span>
         </div>
       </div>
     </div>

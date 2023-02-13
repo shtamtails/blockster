@@ -1,8 +1,9 @@
-import { BsTwitter } from "react-icons/bs";
+import { AirdropsCalendar } from "./assets/components/page/AirdropsCalendar/AirdropsCalendar";
+import { AsideNews } from "./assets/components/page/AsideNews/AsideNews";
 import { Charts } from "./assets/components/page/Charts/Charts";
 import Header from "./assets/components/page/Header/Header";
 import { Sidebar } from "./assets/components/page/Sidebar/Sidebar";
-import { AsidePost } from "./assets/components/reusable/AsidePost/AsidePost";
+import { TrendingNow } from "./assets/components/page/TrendingNow/TrendingNow";
 import { Title } from "./assets/components/reusable/Title/Title";
 import "./assets/style/main.scss";
 
@@ -15,73 +16,37 @@ function App() {
         <Charts />
         <div className="news">
           <main>
-            <Title text="Airdrops calendar" line />
-            <div className="airdrops-calendar">
-              <div className="box">
-                <div className="airdrop-date">
-                  <span>3</span> Feb 2023
-                </div>
-                <div className="airdrop-name">TopGoal x CoinMarketCap 3rd NFTs Airdrop Event</div>
-                <div className="airdrop-amount">3 000 NFT</div>
-              </div>
-              <div className="box">
-                <div className="airdrop-date">
-                  <span>3</span> Feb 2023
-                </div>
-                <div className="airdrop-name">TopGoal x CoinMarketCap 3rd NFTs Airdrop Event</div>
-                <div className="airdrop-amount">3 000 NFT</div>
-              </div>
-              <div className="box">
-                <div className="airdrop-date">
-                  <span>3</span> Feb 2023
-                </div>
-                <div className="airdrop-name">TopGoal x CoinMarketCap 3rd NFTs Airdrop Event</div>
-                <div className="airdrop-amount">3 000 NFT</div>
-              </div>
-              <div className="box">
-                <div className="airdrop-date">
-                  <span>3</span> Feb 2023
-                </div>
-                <div className="airdrop-name">TopGoal x CoinMarketCap 3rd NFTs Airdrop Event</div>
-                <div className="airdrop-amount">3 000 NFT</div>
-              </div>
-              <div className="box">
-                <div className="airdrop-date">
-                  <span>3</span> Feb 2023
-                </div>
-                <div className="airdrop-name">TopGoal x CoinMarketCap 3rd NFTs Airdrop Event</div>
-                <div className="airdrop-amount">3 000 NFT</div>
-              </div>
+            <div className="aside-news-mobile">
+              <AsideNews />
             </div>
-            <Title text="Trending now" line />
+            <AirdropsCalendar />
+            <TrendingNow />
+            <div className="main-ad">
+              <img src="https://www.vseprosport.ru/images/bookmaker-banners/1xby_1645015630.webp" />
+            </div>
+            {/* <Title text="Topics" line />
+            <div className="topics">
+              <div className="tags">
+                <div className="tag">Bitcoin</div>
+                <div className="tag">Blockchain</div>
+                <div className="tag">Economics</div>
+                <div className="tag">Money Trading</div>
+                <div className="tag">Alternative Investments</div>
+                <div className="tag">Digitex</div>
+                <div className="tag">BXR</div>
+                <div className="tag">Blockster</div>
+                <div className="tag">Cryptocurrency Investments</div>
+                <div className="tag">Ethereum cryptos</div>
+              </div>
+              <a href="#" className="moretags">
+                View more categories
+              </a>
+            </div> */}
           </main>
           <aside>
-            <Title text="News" line />
-            <div className="news-container">
-              <AsidePost
-                src="#"
-                srcIcon="https://pbs.twimg.com/profile_images/1492287717702615041/bcymg584_400x400.jpg"
-                srcName="DeFi News Network"
-                time="12 m"
-                srcSocialIcon={<BsTwitter color={"#00acee"} />}
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique consequuntur tenetur, odit quas quidem soluta sunt cumque eum atque libero, quibusdam necessitatibus dolores nam totam esse, excepturi perferendis quam officiis!..."
-              />
-              <AsidePost
-                src="#"
-                srcIcon="https://pbs.twimg.com/profile_images/1494079638758477832/PK2Vg2GP_400x400.jpg"
-                srcName="XRIV | Infinity Vault"
-                time="20 m"
-                srcSocialIcon={<BsTwitter color={"#00acee"} />}
-                content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio laborum aliquid labore ea repellendus, doloremque sapiente voluptatem unde fuga consequuntur?"
-              />
-              <AsidePost
-                src="#"
-                srcIcon="https://miro.medium.com/max/2400/1*vSkLvlptxKN1x9ISfRJQrQ.png"
-                srcName="Bitcoin Magazine"
-                time="36 m"
-                srcSocialIcon={<BsTwitter color={"#00acee"} />}
-                content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem distinctio..."
-              />
+            <AsideNews />
+            <div className="aside-ad">
+              <img src="https://blockwiz.com/wp-content/uploads/2022/09/Blog-01-1.jpg" />
             </div>
           </aside>
         </div>

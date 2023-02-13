@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Chart } from "../../reusable/Chart/Chart";
+import { Chart } from "./Chart";
 
 type Tcryptocurrencies = {
   name: string;
