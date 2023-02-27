@@ -3,10 +3,10 @@
   .content {
     padding: 0 $lg !important;
   }
-  .charts {
+  .charts-container {
     max-width: calc(100vw - $xxl) !important;
-    margin-top: $lg !important;
   }
+
   main {
     padding-right: 0px !important;
   }
@@ -21,11 +21,15 @@
     justify-content: center;
     align-items: center;
   }
-  .small-post-image img {
-    width: 100px !important;
-    height: 100px !important;
+  .post-image img {
+    // width: 100px !important;
+    // height: 100px !important;
   }
   .podcast {
     width: 100% !important;
+  }
+
+  .footer {
+    padding: $xl $lg !important;
   }
 }

@@ -2,8 +2,9 @@
   margin-top: $xxl;
   box-sizing: border-box;
   max-width: 1600px;
-  overflow-x: overlay;
+  overflow: hidden;
   display: flex;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     max-height: 0px;
   }
@@ -59,11 +60,26 @@
 }
 
 .hidden {
-  transition: 1s ease;
-  opacity: 0;
+  transition: 0.5s ease;
+  // opacity: 0;
 }
 
 .visible {
-  transition: 1s ease;
+  transition: 0.5s ease;
   opacity: 1;
+}
+
+.charts-container {
+  position: relative;
+  display: flex;
+  &:hover {
+    .scroll-button {
+      transition: all 0.3s;
+      opacity: 1;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
 }

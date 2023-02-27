@@ -1,6 +1,5 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { IconType } from "react-icons";
-import { FiCloudLightning } from "react-icons/fi";
 
 interface InputProps {
   placeholder?: string;
@@ -19,22 +18,26 @@ export const Input: React.FC<InputProps> = (props) => {
     props.onChange(value);
   };
 
-  const classNames: string[] = [];
+  const tempClassNames = [];
+  props.fullWidth && tempClassNames.push("input-fullwidth");
+  props.size && tempClassNames.push(`input-size-${props.size}`);
+  props.icon && tempClassNames.push("input-with-icon");
 
-  props.fullWidth && classNames.push("input-fullwidth");
-  props.size && classNames.push(`input-size-${props.size}`);
-  props.icon && classNames.push("input-with-icon");
+  const [classNames, setClassNames] = useState<string[]>(tempClassNames);
+  const [iconClassNames, setIconClassNames] = useState<string[]>(["icon"]);
+  const [selected, setSelected] = useState<boolean>(false);
 
   return (
     <div className="input-container">
-      {props.icon && <div className="icon">{props.icon}</div>}
       <input
         ref={props.ref}
         placeholder={props.placeholder}
         style={{ height: props.height, width: props.width }}
         onChange={handleChange}
         className={classNames.join(" ")}
+        onClick={() => {}}
       />
+      {props.icon && <div className={iconClassNames.join(" ")}>{props.icon}</div>}
     </div>
   );
 };

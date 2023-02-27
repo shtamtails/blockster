@@ -19,6 +19,9 @@
 @import "/src/assets/style/media/laptop-l.scss";
 @import "/src/assets/style/media/tablet.scss";
 @import "/src/assets/components/page/Podcasts/podcasts.scss";
+@import "/src/assets/components/page/Topics/topics.scss";
+@import "/src/assets/components/page/Post/Post.scss";
+@import "/src/assets/components/page/Footer/footer.scss";
 
 body {
   background-color: $background;
@@ -111,4 +114,41 @@ a {
 .moretags {
   font-size: 0.9rem;
   color: $neutral;
+}
+
+.flex {
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.scroll-button-left {
+  // left: 0;
+  background: transparent;
+  background-image: linear-gradient(to left, transparent, $primary);
+}
+
+.scroll-button-right {
+  background: transparent;
+  background-image: linear-gradient(to right, transparent, $primary);
+  right: 0;
+}
+
+.scroll-button {
+  font-size: 2em;
+  transition: all 0.3s;
+  opacity: 1;
+  z-index: 5;
+  margin-top: $xxl;
+  color: $neutral;
+  height: 75px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: none;
+  cursor: pointer;
 }

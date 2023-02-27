@@ -9,6 +9,7 @@ interface ActionIconProps {
   img?: string;
   type?: "hover";
   borderRadius?: "xs" | "sm" | "md" | "lg" | "xl" | "round";
+  selected?: boolean;
 }
 
 export const ActionIcon: React.FC<ActionIconProps> = (props) => {
@@ -16,6 +17,7 @@ export const ActionIcon: React.FC<ActionIconProps> = (props) => {
   props.className && classNames.push(props.className);
   props.type && classNames.push(`action-icon-${props.type}`);
   props.borderRadius && classNames.push(`border-${props.borderRadius}`);
+  props.selected && classNames.push(`action-icon-hover-selected`);
 
   return (
     <a href={props.src} className={classNames.join(" ")} onClick={props.onClick}>

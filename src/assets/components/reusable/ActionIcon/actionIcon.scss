@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   color: $neutral;
+  transition: all 0.1s ease;
   &:hover {
     color: $white;
   }
@@ -23,5 +24,13 @@
   &:hover {
     color: $white;
     background-color: $primary;
+  }
+}
+.action-icon-hover-selected {
+  background-color: $secondary;
+  color: white;
+  &:hover {
+    background-color: $secondary;
+    color: white;
   }
 }

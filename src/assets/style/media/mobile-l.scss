@@ -4,22 +4,25 @@
     display: none;
   }
 
-  .small-post {
+  .post {
     flex-direction: column;
     &:not(:last-child) {
       margin-bottom: $xxl !important;
     }
-    .small-post-image img {
+    .post-image img {
       border-radius: $border-md !important;
       width: 100% !important;
       height: 125px !important;
       margin-bottom: $md;
     }
-    .small-post-info {
+    .post-info {
       margin-left: 0 !important;
     }
-    .post-title {
+    .title {
       padding-bottom: $xl;
+    }
+    .post-body {
+      margin-left: 0 !important;
     }
   }
   .podcast {

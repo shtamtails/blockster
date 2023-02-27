@@ -1,21 +1,23 @@
-.airdrops-calendar {
+.airdrops-container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  overflow-x: overlay;
-  &::-webkit-scrollbar {
-    max-height: 0px;
-  }
   &:hover {
-    &::-webkit-scrollbar {
-      max-height: $md;
+    .scroll-button {
+      transition: all 0.3s;
+      opacity: 1;
     }
   }
+}
 
-  &::-webkit-scrollbar-thumb {
-    background-color: $primary;
-    border-radius: $border-xxl;
-  }
+.airdrops-calendar {
+  scroll-behavior: smooth;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
   .box {
+    position: relative;
     &:not(:first-child) {
       margin-left: $xl;
     }
@@ -45,4 +47,20 @@
       color: $neutral;
     }
   }
+}
+
+.airdrop-scroll-button {
+  top: -$xxl;
+  height: 200px !important;
+}
+
+.airdrop-scroll-button-left {
+  background: transparent !important;
+  background-image: linear-gradient(to left, transparent, $background) !important;
+}
+
+.airdrop-scroll-button-right {
+  background: transparent !important;
+  background-image: linear-gradient(to right, transparent, $background) !important;
+  right: 0 !important;
 }

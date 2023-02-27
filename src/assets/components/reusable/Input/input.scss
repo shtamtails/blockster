@@ -6,19 +6,34 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    top: 0;
     left: 16px;
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 
   input {
+    font-weight: 300;
+
     box-sizing: border-box;
     background-color: $secondary;
     border: none;
     border-radius: $border-sm;
     padding: $md $lg;
     color: $neutral;
+    transition: all 0.3s ease;
+
     &:focus {
       outline: 0 none;
+      padding-left: 16px !important;
+      transition: all 0.3s ease;
     }
+    &:focus + .icon {
+      opacity: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
     &::placeholder {
       font-weight: 300;
       font-size: 16px;
@@ -33,22 +48,10 @@
   .input-fullwidth {
     width: 100%;
   }
+}
 
-  .input-size-xs {
-    // height:
-    // width:
-    // padding:
-  }
-
-  .input-size-sm {
-  }
-
-  .input-size-md {
-  }
-
-  .input-size-lg {
-  }
-
-  .input-size-xl {
-  }
+.input-icon-active {
+  left: 0px !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease;
 }

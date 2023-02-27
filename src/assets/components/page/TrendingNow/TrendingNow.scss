@@ -22,58 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .small-post {
-      &:first-child {
-        display: none;
-      }
-      &:not(:last-child) {
-        margin-bottom: $xl;
-      }
-      display: flex;
-      .small-post-image img {
-        border-radius: $border-xxl;
-        width: 125px;
-        height: 125px;
-        object-fit: cover;
-      }
-      .small-post-info {
-        width: 100%;
-        margin-left: $lg;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .tags {
-          padding-top: 0;
-        }
-        .post-info {
-          padding: 0;
-        }
-      }
+    & .post:first-of-type {
+      display: none;
     }
-  }
-
-  .post-info {
-    display: flex;
-    align-items: center;
-    font-size: 0.85rem;
-    span {
-      color: $neutral;
-    }
-    .post-author {
-      gap: $md;
-      display: flex;
-      margin-right: $xs;
-    }
-    .post-date {
-      margin-left: $xs;
-      color: $neutral;
-      word-wrap: nowrap;
-    }
-  }
-
-  .post-title {
-    padding-bottom: $md;
-    font-size: 1.1rem;
   }
 }
 

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Chart } from "./Chart";
 
 type Tcryptocurrencies = {
@@ -123,6 +124,25 @@ export const Charts = () => {
 
   const [cryptocurrencies, setCryptocurrencies] = useState<Tcryptocurrencies>(cryptocurrenciesDefault);
 
+  const [scrollX, setScrollX] = useState({ side: "" });
+  const [scrollLeft, setScrollLeft] = useState(0);
+  // @ts-ignore
+  const chartsRef: RefObject<HTMLDivElement> = useRef();
+  const handleScroll = (data: { side: string }) => {
+    setScrollX(() => ({ side: data.side }));
+  };
+
+  useEffect(() => {
+    if (scrollX.side === "right") {
+      chartsRef.current!.scrollLeft += 250;
+      setScrollLeft(chartsRef.current!.scrollLeft + 250);
+    }
+    if (scrollX.side === "left") {
+      chartsRef.current!.scrollLeft -= 250;
+      setScrollLeft(chartsRef.current!.scrollLeft - 250);
+    }
+  }, [scrollX]);
+
   const updateCryptocurrencies = async () => {
     const updatedCryptocurrencies = [...cryptocurrencies];
     for (let i = 0; i < updatedCryptocurrencies.length; i++) {
@@ -138,18 +158,29 @@ export const Charts = () => {
   }, []);
 
   return (
-    <div className="charts">
-      {cryptocurrencies.map((el, i) => (
-        <Chart
-          name={el.visibleName}
-          price={el.price}
-          diff={el.diff}
-          data={el.data}
-          img={el.logo}
-          key={i}
-          visible={!!el.price}
-        />
-      ))}
+    <div className="charts-container">
+      {scrollLeft > 0 && (
+        <button className={`scroll-button scroll-button-left`} onClick={() => handleScroll({ side: "left" })}>
+          {"<"}
+        </button>
+      )}
+
+      <div className="charts" ref={chartsRef}>
+        {cryptocurrencies.map((el, i) => (
+          <Chart
+            name={el.visibleName}
+            price={el.price}
+            diff={el.diff}
+            data={el.data}
+            img={el.logo}
+            key={i}
+            visible={!!el.price}
+          />
+        ))}
+      </div>
+      <button className="scroll-button scroll-button-right" onClick={() => handleScroll({ side: "right" })}>
+        {">"}
+      </button>
     </div>
   );
 };

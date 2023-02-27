@@ -1,0 +1,12 @@
+.more-tags {
+  margin: $lg 0;
+  a {
+    color: $neutral;
+    font-size: 0.9rem;
+  }
+}
+
+.main-posts {
+  display: flex;
+  flex-direction: column;
+}

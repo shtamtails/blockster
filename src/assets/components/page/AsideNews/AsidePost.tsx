@@ -14,7 +14,7 @@ interface AsidePostProps {
 
 export const AsidePost: React.FC<AsidePostProps> = (props) => {
   return (
-    <div className="post">
+    <div className="aside-post">
       <div className="post-header">
         <div className="post-source">
           <div className="post-icon">
