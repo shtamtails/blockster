@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef, useState } from "react";
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Chart } from "./Chart";
+import "./Chart.scss";
 
 type Tcryptocurrencies = {
   name: string;

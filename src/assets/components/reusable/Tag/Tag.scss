@@ -1,0 +1,9 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
+.tags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}

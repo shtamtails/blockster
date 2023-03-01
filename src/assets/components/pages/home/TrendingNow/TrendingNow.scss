@@ -1,0 +1,44 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
+.trending-now-container {
+  display: flex;
+
+  .right-posts {
+    padding-left: $lg;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap !important;
+    & .post:first-of-type {
+      display: none;
+    }
+  }
+}
+
+.tags-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.big-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: auto;
+  .big-post-image img {
+    margin-bottom: $md;
+    object-fit: cover;
+    border-radius: $border-xxl;
+    width: 100%;
+    height: 300px;
+  }
+  .big-post-title {
+    font-size: 1.1rem;
+    margin: $lg 0;
+  }
+}

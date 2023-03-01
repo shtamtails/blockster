@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { IconType } from "react-icons";
-
-import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import { ActionIcon } from "../../../reusable/ActionIcon/ActionIcon";
 
 interface AsidePostProps {
   srcIcon: string;

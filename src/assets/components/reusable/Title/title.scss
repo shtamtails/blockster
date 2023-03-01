@@ -2,7 +2,7 @@
   margin: $xxl 0;
   display: flex;
   .title-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     white-space: nowrap;
   }
@@ -16,6 +16,14 @@
       background-color: $secondary;
       height: 1px;
       width: 100%;
+    }
+  }
+  .title-end {
+    white-space: nowrap;
+    padding-left: $lg;
+    font-size: 0.9rem;
+    a {
+      color: $neutral;
     }
   }
 }

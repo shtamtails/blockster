@@ -17,27 +17,27 @@
 
   $newattribute: $attribute + "-bottom";
   @each $name, $value in $spacing-map {
-    &-bottom#{$prefix}#{$name} {
+    &-b#{$prefix}#{$name} {
       #{$newattribute}: $value;
     }
   }
   $newattribute: $attribute + "-top";
   @each $name, $value in $spacing-map {
-    &-top#{$prefix}#{$name} {
+    &-t#{$prefix}#{$name} {
       #{$newattribute}: $value;
     }
   }
 
   $newattribute: $attribute + "-left";
   @each $name, $value in $spacing-map {
-    &-left#{$prefix}#{$name} {
+    &-l#{$prefix}#{$name} {
       #{$newattribute}: $value;
     }
   }
 
   $newattribute: $attribute + "-right";
   @each $name, $value in $spacing-map {
-    &-right#{$prefix}#{$name} {
+    &-r#{$prefix}#{$name} {
       #{$newattribute}: $value;
     }
   }
@@ -58,7 +58,7 @@
 }
 
 @mixin border-radius-utility($att, $prefix: "-") {
-  $sizes: "xs", "sm", "md", "lg", "xl", "xxl";
+  $sizes: "xs", "sm", "md", "lg", "xl", "xxl", "round";
 
   $border-map: (
     xs: 4px,
@@ -76,14 +76,40 @@
     }
   }
 }
-.margin {
+
+@mixin gap-utility($att, $prefix: "-") {
+  $sizes: "xs", "sm", "md", "lg", "xl", "xxl", "xxxl", "xxxxl";
+
+  $border-map: (
+    xs: 4px,
+    sm: 6px,
+    md: 8px,
+    lg: 10px,
+    xl: 12px,
+    xxl: 14px,
+    xxxl: 20px,
+    xxxxl: 36px,
+  );
+
+  @each $name, $value in $border-map {
+    &#{$prefix}#{$name} {
+      #{$att}: $value;
+    }
+  }
+}
+
+.mg {
   @include spacing-utility(margin);
 }
 
-.padding {
+.pd {
   @include spacing-utility(padding);
 }
 
 .border {
   @include border-radius-utility(border-radius);
+}
+
+.gap {
+  @include gap-utility(gap);
 }

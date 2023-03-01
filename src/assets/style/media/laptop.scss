@@ -1,5 +1,18 @@
 // 1024px
 @media (max-width: $laptop) {
+  .post-page-read-more {
+    display: block;
+    gap: $xxl;
+    .post-page-read-more-left-block {
+      width: 100%;
+    }
+    .post-page-read-more-right-block {
+      margin-top: $xl;
+
+      width: 100%;
+    }
+  }
+
   .charts-container {
     max-width: calc(100vw - 128px);
   }

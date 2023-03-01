@@ -1,6 +1,7 @@
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import "./footer.scss";
 
 export const Footer = () => {
   return (

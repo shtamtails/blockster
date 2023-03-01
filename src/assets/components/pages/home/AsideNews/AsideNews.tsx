@@ -1,11 +1,12 @@
 import { BsTwitter } from "react-icons/bs";
+import { Title } from "../../../reusable/Title/Title";
 import { AsidePost } from "./AsidePost";
-import { Title } from "../../reusable/Title/Title";
+import "./AsideNews.scss";
 
 export const AsideNews = () => {
   return (
     <>
-      <Title text="News" line />
+      <Title hr>News</Title>
       <div className="news-container">
         <AsidePost
           src="#"

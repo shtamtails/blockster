@@ -1,3 +1,6 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
 .header {
   height: $header-h;
   background-color: $primary;

@@ -1,3 +1,6 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
 .sidebar {
   margin-top: calc($xxl - 20px);
   display: flex;

@@ -1,15 +1,15 @@
 @import "./utils/mixins.scss";
 @import "./utils/var.scss";
 @import "./utils/normalize.css";
-@import "/src/assets/components/page/header/header.scss";
+// @import "/src/assets/components/page/header/header.scss";
 @import "/src/assets/components/reusable/Input/input.scss";
 @import "/src/assets/components/reusable/ActionIcon/actionIcon.scss";
-@import "/src/assets/components/page/Sidebar/sidebar.scss";
-@import "/src/assets/components/page/Charts/chart.scss";
-@import "/src/assets/components/page/AsideNews/asideNews.scss";
-@import "/src/assets/components/page/AirdropsCalendar/airdropsCalendar.scss";
+// @import "/src/assets/components/page/Sidebar/sidebar.scss";
+// @import "/src/assets/components/page/Charts/chart.scss";
+// @import "/src/assets/components/page/AsideNews/asideNews.scss";
+// @import "/src/assets/components/page/AirdropsCalendar/airdropsCalendar.scss";
 @import "/src/assets/components/reusable/Title/title.scss";
-@import "/src/assets/components/page/TrendingNow/TrendingNow.scss";
+// @import "/src/assets/components/page/TrendingNow/TrendingNow.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
 @import "/src/assets/style/media/custom.scss";
 @import "/src/assets/style/media/laptop.scss";
@@ -18,10 +18,10 @@
 @import "/src/assets/style/media/mobile-s.scss";
 @import "/src/assets/style/media/laptop-l.scss";
 @import "/src/assets/style/media/tablet.scss";
-@import "/src/assets/components/page/Podcasts/podcasts.scss";
-@import "/src/assets/components/page/Topics/topics.scss";
-@import "/src/assets/components/page/Post/Post.scss";
-@import "/src/assets/components/page/Footer/footer.scss";
+// @import "/src/assets/components/page/Podcasts/podcasts.scss";
+// @import "/src/assets/components/page/Topics/topics.scss";
+// @import "/src/assets/components/page/Post/Post.scss";
+// @import "/src/assets/components/page/Footer/footer.scss";
 
 body {
   background-color: $background;
@@ -65,35 +65,13 @@ a {
     padding-right: $xxl;
     position: relative;
     width: 75%;
-    .main-ad {
-      width: 100%;
-      height: auto;
-      img {
-        margin-top: $xxl;
-        border-radius: $border-lg;
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-      }
-    }
+
     .aside-news-mobile {
       display: none;
     }
   }
   aside {
     width: 25%;
-    .aside-ad {
-      margin-top: $xxl;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: $border-xl;
-      }
-    }
   }
 }
 
@@ -151,4 +129,29 @@ a {
   position: absolute;
   border: none;
   cursor: pointer;
+}
+
+.main-ad {
+  width: 100%;
+  height: auto;
+  img {
+    margin-top: $xxl;
+    border-radius: $border-lg;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.aside-ad {
+  margin-top: $xxl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: $border-xl;
+  }
 }

@@ -1,6 +1,6 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { BsPlay, BsPlayCircle } from "react-icons/bs";
-import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import { ActionIcon } from "../../../reusable/ActionIcon/ActionIcon";
 
 interface PodcastProps {
   img: string;

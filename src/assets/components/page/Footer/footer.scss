@@ -1,3 +1,6 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
 .footer {
   background-color: $primary;
   padding: $xl 110px;

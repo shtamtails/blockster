@@ -1,0 +1,86 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+@import "/src/assets/style/utils/helpers.scss";
+
+.post-page-image {
+  img {
+    border-radius: $border-sm;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+.post-page-content {
+  display: flex;
+  .post-page-main {
+    margin: $xxl 0;
+    width: 70%;
+    margin-right: $xxl;
+    .post-page-main-content {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .post-page-main-content-socials {
+      margin-top: $xxl;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      color: $neutral;
+    }
+  }
+  .post-page-aside {
+    width: 30%;
+  }
+}
+.post-page-author {
+  margin: $xxl 0;
+  .post-page-author-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .post-page-author-publisher {
+      display: flex;
+      .post-page-author-img {
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 100%;
+        }
+      }
+      .post-page-author-publisher-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: $md;
+        .post-page-author-publisher-name {
+        }
+        .post-page-author-publisher-followers {
+          color: $neutral;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  .post-page-author-body {
+    font-size: 0.9rem;
+    margin-top: $lg;
+  }
+}
+
+.post-page-author-mobile {
+  display: none;
+}
+
+.post-page-read-more {
+  display: flex;
+  gap: $xxl;
+  .post-page-read-more-left-block {
+    width: 50%;
+  }
+  .post-page-read-more-right-block {
+    width: 50%;
+  }
+}

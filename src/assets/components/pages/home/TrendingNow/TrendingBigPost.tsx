@@ -1,22 +1,33 @@
 import { BsBookmark } from "react-icons/bs";
-import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import { ActionIcon } from "../../../reusable/ActionIcon/ActionIcon";
+import { Tag } from "../../../reusable/Tag/Tag";
+import { TagsContainer } from "../../../reusable/Tag/TagsContainer";
 import { PostProps } from "../Post/Post";
 
 export const TrendingBigPost: React.FC<PostProps> = (props) => {
   return (
-    <div className="big-post">
+    <div className="big-post" style={{ width: `${props.imgWidth}`, height: `${props.imgHeight}` }}>
       <div className="big-post-body">
         <a href={props.link} className="big-post-image">
           <img src={props.img} style={{ width: `${props.imgWidth}`, height: `${props.imgHeight}` }} />
         </a>
         <div className="tags-container">
-          <div className="tags">{props.tag && <div className="tag">{props.tag}</div>}</div>
+          {props.tags && (
+            <TagsContainer>
+              <>
+                {props.tags.map((tag) => (
+                  <Tag>{tag}</Tag>
+                ))}
+              </>
+            </TagsContainer>
+          )}
           <ActionIcon icon={<BsBookmark size={20} />} />
         </div>
-
-        <a href={props.link} className="post-title">
-          {props.title}
-        </a>
+        <div className="big-post-title">
+          <a href={props.link} className="big-post-title">
+            {props.title}
+          </a>
+        </div>
       </div>
 
       <div className="post-info">

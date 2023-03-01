@@ -1,3 +1,6 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
 .news-container {
   .aside-post {
     &:not(:last-child) {

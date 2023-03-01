@@ -1,7 +1,7 @@
-import { AirdropPost, AirdropPostProps } from "./AirdropPost";
-import { Title } from "../../reusable/Title/Title";
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+import { AirdropPost } from "./AirdropPost";
 import { useState, useEffect, useRef } from "react";
+import { Title } from "../../../reusable/Title/Title";
+import "./AirdropsCalendar.scss";
 
 export const AirdropsCalendar = () => {
   const [scrollX, setScrollX] = useState({ side: "" });
@@ -26,7 +26,7 @@ export const AirdropsCalendar = () => {
 
   return (
     <>
-      <Title text="Airdrops calendar" line />
+      <Title hr>Airdrops Calendar</Title>
       <div className="airdrops-container">
         {scrollLeft > 0 && (
           <button
