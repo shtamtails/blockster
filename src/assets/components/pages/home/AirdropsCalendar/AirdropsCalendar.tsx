@@ -9,7 +9,6 @@ export const AirdropsCalendar = () => {
   // @ts-ignore
   const chartsRef: RefObject<HTMLDivElement> = useRef();
   const handleScroll = (data: { side: string }) => {
-    console.log("qwe");
     setScrollX(() => ({ side: data.side }));
   };
 

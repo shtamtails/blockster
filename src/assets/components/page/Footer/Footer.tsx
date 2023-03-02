@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
+import { Select, SelectData } from "../../reusable/Select/Select";
 import "./footer.scss";
 
 export const Footer = () => {

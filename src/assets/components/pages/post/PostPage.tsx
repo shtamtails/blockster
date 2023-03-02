@@ -1,11 +1,10 @@
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { BsBookmark, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsBookmark, BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { ActionIcon } from "../../reusable/ActionIcon/ActionIcon";
 import { Tag } from "../../reusable/Tag/Tag";
 import { TagsContainer } from "../../reusable/Tag/TagsContainer";
 import { Title } from "../../reusable/Title/Title";
 import { Post } from "../home/Post/Post";
-import { TrendingBigPost } from "../home/TrendingNow/TrendingBigPost";
 import "./PostPage.scss";
 import "../home/TrendingNow/TrendingNow.scss";
 
@@ -16,6 +15,7 @@ export const PostPage = () => {
       <div className="post-page-image">
         <img src="https://miro.medium.com/max/1024/1*Dn5je5NOqqM3Mt6-nAmhKg.png" />
       </div>
+
       <div className="post-page-author-mobile">
         <Title hr>Published by</Title>
         <div className="post-page-author">

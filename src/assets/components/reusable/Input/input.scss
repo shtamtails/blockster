@@ -13,15 +13,14 @@
   }
 
   input {
-    font-weight: 300;
-
+    font-size: 0.95rem;
     box-sizing: border-box;
     background-color: $secondary;
     border: none;
     border-radius: $border-sm;
     padding: $md $lg;
-    color: $neutral;
     transition: all 0.3s ease;
+    color: RGB(200, 200, 200);
 
     &:focus {
       outline: 0 none;
@@ -35,8 +34,7 @@
     }
 
     &::placeholder {
-      font-weight: 300;
-      font-size: 16px;
+      font-size: 0.9rem;
       color: $neutral;
     }
   }

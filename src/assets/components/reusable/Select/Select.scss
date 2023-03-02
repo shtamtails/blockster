@@ -1,0 +1,108 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+@import "/src/assets/style/utils/helpers.scss";
+
+.select-container {
+  width: 320px;
+  .select-label {
+    font-size: 0.8rem;
+    color: $neutral;
+    margin-bottom: $sm;
+  }
+  .select {
+    cursor: pointer;
+    position: relative;
+    // width: 320px;
+    // background-color: $secondary;
+    background-color: $primary;
+    border: 2px solid $secondary;
+    border-radius: $border-sm;
+    display: flex;
+    align-items: center;
+    padding: 12px $lg;
+    color: RGB(200, 200, 200);
+    font-weight: 300;
+    font-size: 0.95rem;
+
+    .select-icon {
+      padding-right: $md;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 24px;
+        width: auto;
+      }
+    }
+    .select-text {
+    }
+    .select-placeholder {
+      color: $neutral;
+    }
+    .select-chevron {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: $lg;
+    }
+    .chevron-neutral {
+      color: $neutral;
+    }
+  }
+  .select-menu {
+    margin-top: 8px;
+    position: absolute;
+    z-index: 6;
+    width: 320px;
+    background-color: $primary;
+    border: 2px solid $secondary;
+    border-radius: $border-sm;
+    display: flex;
+    flex-direction: column;
+    padding: $md 0;
+    align-items: center;
+    .select-menu-item {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #bdbec1;
+      width: 97%;
+      padding: 12px $md;
+      border-radius: $border-xs;
+      transition: all 0.15s ease;
+      &:hover {
+        background-color: $secondary;
+      }
+      .select-menu-item-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: $md;
+        img {
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.select-closed {
+  svg {
+    &:last-child {
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.select-opened {
+  svg {
+    &:last-child {
+      transition: transform 0.3s ease;
+      transform: rotate(-180deg);
+    }
+  }
+}

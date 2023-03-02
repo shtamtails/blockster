@@ -60,3 +60,25 @@
     }
   }
 }
+
+.gas-price-closed {
+  svg {
+    &:nth-child(3) {
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.gas-price-opened {
+  svg {
+    &:nth-child(3) {
+      transition: transform 0.3s ease;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.gas-price-gwei {
+  color: #fff;
+}
