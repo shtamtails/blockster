@@ -147,9 +147,15 @@ export const Charts = () => {
     const updatedCryptocurrencies = [...cryptocurrencies];
     for (let i = 0; i < updatedCryptocurrencies.length; i++) {
       const el = updatedCryptocurrencies[i];
-      el.price = await getPrice(el.name);
-      updatedCryptocurrencies[i] = el;
-      setCryptocurrencies(updatedCryptocurrencies);
+      try {
+        el.price = await getPrice(el.name);
+      } catch (err) {
+        console.log(err.message);
+        updateCryptocurrencies();
+      } finally {
+        updatedCryptocurrencies[i] = el;
+        setCryptocurrencies(updatedCryptocurrencies);
+      }
     }
   };
 
