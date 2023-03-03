@@ -86,17 +86,16 @@ export const Select: React.FC<SelectProps> = (props) => {
         }}
       >
         {props.data.map((item, i) => (
-          <>
-            <div
-              className="select-menu-item"
-              onClick={() => {
-                handleItemClick(i);
-              }}
-            >
-              <div className="select-menu-item-icon">{item.icon}</div>
-              <div className="select-menu-item-text">{item.text}</div>
-            </div>
-          </>
+          <div
+            key={i}
+            className="select-menu-item"
+            onClick={() => {
+              handleItemClick(i);
+            }}
+          >
+            <div className="select-menu-item-icon">{item.icon}</div>
+            <div className="select-menu-item-text">{item.text}</div>
+          </div>
         ))}
       </div>
     </div>

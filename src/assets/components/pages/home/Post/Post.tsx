@@ -30,8 +30,8 @@ export const Post: React.FC<PostProps> = (props) => {
           {props.tags && (
             <TagsContainer>
               <>
-                {props.tags.map((tag) => (
-                  <Tag>{tag}</Tag>
+                {props.tags.map((tag, i) => (
+                  <Tag key={i}>{tag}</Tag>
                 ))}
               </>
             </TagsContainer>

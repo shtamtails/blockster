@@ -31,13 +31,11 @@ export const Menu: React.FC<MenuProps> = (props) => {
   useClickOutside(menuRef, props.parentElementRef, handleOutsideClick);
 
   const handleTransitionEnd = () => {
-    if (!props.opened) {
-      setIsTransitioning(false);
-    }
+    !props.opened && setIsTransitioning(false);
   };
 
   useEffect(() => {
-    setIsTransitioning(true);
+    props.opened && setIsTransitioning(true);
   }, [props.opened]);
 
   return (
@@ -55,6 +53,8 @@ export const Menu: React.FC<MenuProps> = (props) => {
           transitionDuration: "150ms",
           transitionTimingFunction: "ease",
           opacity: props.opened ? 1 : 0,
+          // ! BUG - ALWAYS DISPLAYED
+          // TODO FIX BUG
           display: !isTransitioning ? "none" : "block",
         }}
       >

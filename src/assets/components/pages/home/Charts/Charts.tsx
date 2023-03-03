@@ -2,14 +2,14 @@ import { RefObject, useEffect, useRef, useState } from "react";
 import { Chart } from "./Chart";
 import "./Chart.scss";
 
-type Tcryptocurrencies = {
+type Cryptocurrency = {
   name: string;
   visibleName: string;
   logo: string;
   price: string | null;
   data: { uv: number }[];
   diff: string | number;
-}[];
+};
 
 export const Charts = () => {
   const getRandomData = () => {
@@ -47,7 +47,7 @@ export const Charts = () => {
     return `$${tranformedPrice.toFixed(2)}`;
   };
 
-  const cryptocurrenciesDefault: Tcryptocurrencies = [
+  const cryptocurrenciesDefault: Cryptocurrency[] = [
     {
       name: "BTCUSDT",
       visibleName: "BTC",
@@ -122,46 +122,43 @@ export const Charts = () => {
     },
   ];
 
-  const [cryptocurrencies, setCryptocurrencies] = useState<Tcryptocurrencies>(cryptocurrenciesDefault);
-
-  const [scrollX, setScrollX] = useState({ side: "" });
-  const [scrollLeft, setScrollLeft] = useState(0);
-  // @ts-ignore
-  const chartsRef: RefObject<HTMLDivElement> = useRef();
-  const handleScroll = (data: { side: string }) => {
-    setScrollX(() => ({ side: data.side }));
-  };
-
-  useEffect(() => {
-    if (scrollX.side === "right") {
-      chartsRef.current!.scrollLeft += 250;
-      setScrollLeft(chartsRef.current!.scrollLeft + 250);
-    }
-    if (scrollX.side === "left") {
-      chartsRef.current!.scrollLeft -= 250;
-      setScrollLeft(chartsRef.current!.scrollLeft - 250);
-    }
-  }, [scrollX]);
+  const [cryptocurrencies, setCryptocurrencies] = useState<Cryptocurrency[]>(cryptocurrenciesDefault);
 
   const updateCryptocurrencies = async () => {
-    const updatedCryptocurrencies = [...cryptocurrencies];
-    for (let i = 0; i < updatedCryptocurrencies.length; i++) {
-      const el = updatedCryptocurrencies[i];
-      try {
-        el.price = await getPrice(el.name);
-      } catch (err) {
-        console.log(err.message);
-        updateCryptocurrencies();
-      } finally {
-        updatedCryptocurrencies[i] = el;
-        setCryptocurrencies(updatedCryptocurrencies);
-      }
-    }
+    const updatedCryptocurrencies: Cryptocurrency[] = [...cryptocurrencies];
+    updatedCryptocurrencies.forEach(async (cryptocurrency: Cryptocurrency) => {
+      const updatedPrice = await getPrice(cryptocurrency.name);
+      setCryptocurrencies((prevCryptocurrencies) =>
+        prevCryptocurrencies.map((prevEl) =>
+          prevEl.name === cryptocurrency.name ? { ...prevEl, price: updatedPrice } : prevEl
+        )
+      );
+    });
   };
 
   useEffect(() => {
     updateCryptocurrencies();
   }, []);
+
+  const [scrollX, setScrollX] = useState({ side: "" });
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const chartsRef: RefObject<HTMLDivElement> = useRef(null);
+  const handleScroll = (data: { side: string }) => {
+    setScrollX(() => ({ side: data.side }));
+  };
+
+  useEffect(() => {
+    const chartsElement = chartsRef.current;
+    const increment = 250;
+    if (scrollX.side === "right") {
+      chartsElement!.scrollLeft += increment;
+      setScrollLeft(chartsElement!.scrollLeft + increment);
+    }
+    if (scrollX.side === "left") {
+      chartsElement!.scrollLeft -= increment;
+      setScrollLeft(chartsElement!.scrollLeft - increment);
+    }
+  }, [scrollX]);
 
   return (
     <div className="charts-container">

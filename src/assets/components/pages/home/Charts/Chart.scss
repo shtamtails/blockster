@@ -64,7 +64,7 @@
 
 .hidden {
   transition: 0.5s ease;
-  // opacity: 0;
+  opacity: 0;
 }
 
 .visible {
@@ -83,6 +83,18 @@
   }
 }
 
-.hidden {
-  opacity: 0;
+.block-loading {
+  animation: skeleton-loading 0.3s linear infinite alternate;
+  border-radius: $border-md;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    color: hsl(200, 20%, 80%);
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    color: hsl(200, 20%, 95%);
+    background-color: hsl(200, 20%, 95%);
+  }
 }

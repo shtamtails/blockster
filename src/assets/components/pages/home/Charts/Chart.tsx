@@ -33,10 +33,10 @@ export const Chart: React.FC<ChartProps> = (props) => {
           </div>
           <div className="chart-info-curreny-name">{props.name}</div>
         </div>
-        <div className="chart-info-price">{props.price}</div>
+        <div className={`chart-info-price`}>{props.price || "$12345.67"}</div>
         <div className={`chart-info-change ${props.diff > 0 ? "color-success" : "color-danger"}`}>
           {props.diff > 0 && "+"}
-          {props.diff}%
+          {props.diff}
         </div>
       </div>
       <div className="chart-misc">
@@ -59,7 +59,9 @@ export const Chart: React.FC<ChartProps> = (props) => {
         <AreaChart
           width={80}
           height={30}
-          data={props.data}
+          data={
+            props.price ? props.data : [{ uv: 0 }, { uv: 0 }, { uv: 0 }, { uv: 0 }, { uv: 0 }, { uv: 0 }, { uv: 0 }]
+          }
           margin={{
             top: 0,
             right: 0,
