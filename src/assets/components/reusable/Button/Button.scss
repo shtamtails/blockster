@@ -1,0 +1,41 @@
+@import "/src/assets/style/utils/mixins.scss";
+@import "/src/assets/style/utils/var.scss";
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-md;
+    padding: $md $lg;
+    border: none;
+    color: white;
+    background-color: $secondary;
+    transition: all 0.15s;
+  }
+  .button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: $sm;
+  }
+  .button-regular {
+    border: none;
+    color: white;
+    background-color: $secondary;
+    &:hover {
+      background-color: RGB(60, 60, 60);
+    }
+  }
+  .button-secondary {
+    background-color: white;
+    color: $secondary;
+  }
+}

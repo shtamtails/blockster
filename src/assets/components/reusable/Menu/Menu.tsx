@@ -55,7 +55,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
           opacity: props.opened ? 1 : 0,
           // ! BUG - ALWAYS DISPLAYED
           // TODO FIX BUG
-          display: !isTransitioning ? "none" : "block",
+          display: !isTransitioning ? "none" : "flex",
         }}
       >
         {props.children}

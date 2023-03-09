@@ -7,6 +7,8 @@ import { Title } from "../../reusable/Title/Title";
 import { Post } from "../home/Post/Post";
 import "./PostPage.scss";
 import "../home/TrendingNow/TrendingNow.scss";
+import { Button } from "../../reusable/Button/Button";
+import { RiUserAddLine } from "react-icons/ri";
 
 export const PostPage = () => {
   return (
@@ -160,7 +162,9 @@ export const PostPage = () => {
                 </div>
               </div>
               <div className="post-page-author-follow-btn">
-                <button>Follow</button>
+                <Button onClick={() => {}} icon={<RiUserAddLine />}>
+                  Follow
+                </Button>
               </div>
             </div>
             <div className="post-page-author-body">Editor-in-chiewf of UX Planet</div>
